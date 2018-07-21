@@ -6,11 +6,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping(value="/pop", method = RequestMethod.GET)
-public class PopController {
+public class HelloController {
 
-    public static void main(String[] args) {
-        System.out.println ("Hello and welcome to Pop");
+    @RequestMapping(value = "/pop", method = RequestMethod.GET)
+    public String home() {
+        return "home";
     }
-    //return "home";
+
 }
