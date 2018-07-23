@@ -29,15 +29,15 @@ ext {
 }
 
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter-data-jpa')
-	compile('org.springframework.boot:spring-boot-starter-security')
+	//compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	//compile('org.springframework.boot:spring-boot-starter-security')
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('org.springframework.boot:spring-boot-starter-web')
-	compile('de.codecentric:spring-boot-admin-starter-client')
-	compile('de.codecentric:spring-boot-admin-starter-server')
+	//compile('de.codecentric:spring-boot-admin-starter-client')
+	//compile('de.codecentric:spring-boot-admin-starter-server')
 	runtime('org.springframework.boot:spring-boot-devtools')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
-	testCompile('org.springframework.security:spring-security-test')
+	//testCompile('org.springframework.boot:spring-boot-starter-test')
+	//testCompile('org.springframework.security:spring-security-test')
 }
 
 dependencyManagement {
@@ -45,3 +45,9 @@ dependencyManagement {
 		mavenBom "de.codecentric:spring-boot-admin-dependencies:${springBootAdminVersion}"
 	}
 }
+
+/*
+bootRun {
+	addResources = true
+}
+*/
