@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:fragment=head">
-    <meta charset="UTF-8"/>
-    <title th:text=${title}">POP</title>
+<head th:fragment="head">
+    <meta charset="UTF-8"/> 
+    <title th:text="${title}">POP</title>
+
+    <link rel="stylesheet" th:href="@{/css/styles.css}"/>
 </head>
 <body>
 <nav th:fragment="navigation">
