@@ -47,7 +47,7 @@ public class HelloController {
     @RequestMapping(value = "login", method = RequestMethod.POST)
     public String processLogInForm(Model model) {
 
-        model.addAttribute("title", "Welcome to Pop!!");
+        //model.addAttribute("title", "Welcome to Pop!!");
 
         return "";
     }
@@ -56,7 +56,7 @@ public class HelloController {
     @RequestMapping(value = "signup", method = RequestMethod.POST)
     public String processSignUpForm(Model model) {
 
-        model.addAttribute("title", "Welcome to Pop!!");
+        //model.addAttribute("title", "Welcome to Pop!!");
 
         return "";
     }
