@@ -1,4 +1,4 @@
-/*package com.example.Pop.controllers;
+package com.example.Pop.controllers;
 
 import com.example.Pop.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -109,5 +109,5 @@ public class UserController {
             return "User/login";
         }
     }
-} */
+
 
