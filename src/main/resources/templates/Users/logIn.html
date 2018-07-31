@@ -3,13 +3,30 @@
 <head th:replace="fragments :: head"></head>
 <body>
 <H1 th:text="${title}"></H1>
-<a href="/pop/signup">Sign Up</a>
+<a href="/pop/add">Sign Up</a>
 
-<form method="post">
-    <input type="text" name="userName"/>
-    <input type="text" name="passWord"/>
-    <input type="submit" value="Sign Up"/>
+
+<div class="form-group">
+    <label for="username-field">Username</label>
+    <input class="form-control" id="username-field" type="text" name="username" th:value="${username}"/>
+</div>
+
+<div class="form-group">
+    <label for="email-field">Email</label>
+    <input class="form-control" id="email-field" type="eamil" name="email" th:value="${email}"/>
+</div>
+
+<div class="form-group">
+    <label for="password-field">Password:</label>
+    <input class="form-control" id="password-field" type="password" name="password" />
+</div>
+<input type="submit" value="Sign Up" />
 </form>
+
+<span class="error" th:text="${message}"></span>
 
 </body>
 </html>
+
+
+
