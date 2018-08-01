@@ -1,6 +1,7 @@
 package com.example.Pop.controllers;
 
 import com.example.Pop.models.User;
+import com.example.Pop.models.data.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,7 +22,7 @@ import java.util.List;
 public class UserController {
     @Autowired
 
-    private UserDoa userdao;
+    private UserDao userdao;
 
 
         @RequestMapping(value = "add")

@@ -29,13 +29,14 @@ ext {
 }
 
 dependencies {
-	//compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	//compile('org.springframework.boot:spring-boot-starter-security')
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	//compile('de.codecentric:spring-boot-admin-starter-client')
 	//compile('de.codecentric:spring-boot-admin-starter-server')
 	runtime('org.springframework.boot:spring-boot-devtools')
+	compile('mysql:mysql-connector-java')
 	//testCompile('org.springframework.boot:spring-boot-starter-test')
 	//testCompile('org.springframework.security:spring-security-test')
 }
