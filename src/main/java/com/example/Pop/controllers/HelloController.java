@@ -22,7 +22,7 @@ public class HelloController {
         return "index";
     }
 
-    @RequestMapping(value = "signup", method = RequestMethod.GET)
+    @RequestMapping(value = "add", method = RequestMethod.GET)
     public String displaySignUpForm(Model model) {
 
         model.addAttribute("title", "Welcome to Pop!!");
@@ -53,7 +53,7 @@ public class HelloController {
     }
 
 
-    @RequestMapping(value = "signup", method = RequestMethod.POST)
+    @RequestMapping(value = "add", method = RequestMethod.POST)
     public String processSignUpForm(Model model) {
 
         //model.addAttribute("title", "Welcome to Pop!!");
