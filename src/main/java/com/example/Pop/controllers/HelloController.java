@@ -22,7 +22,7 @@ public class HelloController {
         return "index";
     }
 
-    @RequestMapping(value = "add", method = RequestMethod.GET)
+    /*@RequestMapping(value = "add", method = RequestMethod.GET)
     public String displaySignUpForm(Model model) {
 
         model.addAttribute("title", "Welcome to Pop!!");
@@ -30,7 +30,7 @@ public class HelloController {
         model.addAttribute("passWord", "Password: ");
         model.addAttribute("eMail", "E-mail: ");
         model.addAttribute("location", "Location: ");
-        return "Users/signUp";
+        return "User/add";
     }
 
 
@@ -40,7 +40,7 @@ public class HelloController {
         model.addAttribute("title", "Welcome to Pop!!");
         model.addAttribute("userName", "Username: ");
         model.addAttribute("passWord", "Password: ");
-        return "Users/logIn";
+        return "User/logIn";
     }
 
 
@@ -59,6 +59,6 @@ public class HelloController {
         //model.addAttribute("title", "Welcome to Pop!!");
 
         return "";
-    }
+    }*/
 
 }

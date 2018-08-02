@@ -36,22 +36,22 @@ public class UserController {
 
 
         @RequestMapping(value = "add", method = RequestMethod.POST)
-        public String add(Model model, @ModelAttribute @Valid User User, Errors errors, String verify) {
+        public String add(Model model, @ModelAttribute @Valid User user, Errors errors, String verify) {
 
-            List<User> sameName = userdao.findByUsername(User.getUsername());
+            List<User> sameName = userdao.findByUsername(user.getUsername());
 
-            if(!errors.hasErrors() && User.getPassword().equals(verify) && sameName.isEmpty()) {
-                model.addAttribute("User", User);
-                userdao.save(User);
-                return "User/index";
+            if(!errors.hasErrors() && user.getPassword().equals(verify) && sameName.isEmpty()) {
+                model.addAttribute("User", user);
+                userdao.save(user);
+                return "index";
 
             } else {
-                model.addAttribute("User", User);
+                model.addAttribute("User", user);
                 model.addAttribute("title", "User Signup");
 
-                if(!User.getPassword().equals(verify)) {
+                if(!user.getPassword().equals(verify)) {
                     model.addAttribute("message", "Passwords must match");
-                    User.setPassword("");
+                    user.setPassword("");
                 }
 
 
@@ -86,7 +86,7 @@ public class UserController {
                 Cookie c = new Cookie("User", User.getUsername());
                 c.setPath("/");
                 response.addCookie(c);
-                return "redirect:/cheese";
+                return "redirect:/home";
             } else {
                 model.addAttribute("message", "Invalid Password");
                 model.addAttribute("title", "Login");

@@ -3,9 +3,10 @@
 <head th:replace="fragments :: head"></head>
 <body>
 <H1 th:text="${title}"></H1>
-<a href="/pop/add">Sign Up</a>
+<a href="/pop/user/add">Sign Up</a>
 
 
+<form method="post" style="max-width:600px;">
 <div class="form-group">
     <label for="username-field">Username</label>
     <input class="form-control" id="username-field" type="text" name="username" th:value="${username}"/>
