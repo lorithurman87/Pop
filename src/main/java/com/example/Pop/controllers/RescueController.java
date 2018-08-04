@@ -43,7 +43,7 @@ public class RescueController {
         if(!errors.hasErrors() && rescue.getPassword().equals(verify) && sameName.isEmpty()) {
             model.addAttribute("Rescue", rescue);
             rescuedao.save(rescue);
-            return "redirect:" + "/pop/rescue/rescueHome";
+            return "redirect:" + "/pop/rescue/Home";
 
         } else {
             model.addAttribute("Rescue", rescue);
@@ -86,7 +86,7 @@ public class RescueController {
             Cookie c = new Cookie("Rescue", rescue.getUsername());
             c.setPath("/");
             response.addCookie(c);
-            return "redirect:" + "/pop/rescue/rescueHome";
+            return "redirect:" + "/pop/rescue/Home";
             //return "redirect:/home";
         } else {
             model.addAttribute("message", "Invalid Password");
