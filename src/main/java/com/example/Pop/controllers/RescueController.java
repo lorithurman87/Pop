@@ -63,22 +63,22 @@ public class RescueController {
     }
 
 
-    @RequestMapping(value = "signin")
+    @RequestMapping(value = "signIn")
     public String signinForm(Model model) {
         model.addAttribute("title", "Login");
         model.addAttribute(new Rescue());
-        return "Rescue/register";
+        return "Rescue/signIn";
     }
 
 
-    @RequestMapping(value = "register", method = RequestMethod.POST)
+    @RequestMapping(value = "signIn", method = RequestMethod.POST)
     public String add(Model model, @ModelAttribute Rescue rescue, HttpServletResponse response) {
         List<Rescue> r = rescuedao.findByUsername(rescue.getUsername());
 
         if(r.isEmpty()) {
             model.addAttribute("message", "Invalid Username");
             model.addAttribute("title", "Login");
-            return "Rescue/register";
+            return "Rescue/signIn";
         }
 
         Rescue loggedIn = r.get(0);
@@ -91,7 +91,7 @@ public class RescueController {
         } else {
             model.addAttribute("message", "Invalid Password");
             model.addAttribute("title", "Login");
-            return "Rescue/register";
+            return "Rescue/signIn";
         }
     }
 
