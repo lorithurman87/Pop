@@ -43,7 +43,7 @@ public class UserController {
             if(!errors.hasErrors() && user.getPassword().equals(verify) && sameName.isEmpty()) {
                 model.addAttribute("User", user);
                 userdao.save(user);
-                return "home";
+                return "redirect:" + "/pop/user/home";
 
             } else {
                 model.addAttribute("User", user);
@@ -86,8 +86,8 @@ public class UserController {
                 Cookie c = new Cookie("User", user.getUsername());
                 c.setPath("/");
                 response.addCookie(c);
-                //return "redirect:" + "/pop/user/home";
-                return "redirect:/home";
+                return "redirect:" + "/pop/user/home";
+                //return "redirect:/home";
             } else {
                 model.addAttribute("message", "Invalid Password");
                 model.addAttribute("title", "Login");

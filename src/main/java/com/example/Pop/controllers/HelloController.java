@@ -25,7 +25,7 @@ public class HelloController {
     @RequestMapping(value = "user/home", method = RequestMethod.GET)
     public String home(Model model) {
         model.addAttribute("title", "Welcome to Pop");
-        return "home";
+        return "User/home";
     }
 
 
