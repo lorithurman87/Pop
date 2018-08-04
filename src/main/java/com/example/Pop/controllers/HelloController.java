@@ -22,6 +22,13 @@ public class HelloController {
         return "index";
     }
 
+    @RequestMapping(value = "user/home", method = RequestMethod.GET)
+    public String home(Model model) {
+        model.addAttribute("title", "Welcome to Pop");
+        return "home";
+    }
+
+
     /*@RequestMapping(value = "add", method = RequestMethod.GET)
     public String displaySignUpForm(Model model) {
 

@@ -43,7 +43,7 @@ public class UserController {
             if(!errors.hasErrors() && user.getPassword().equals(verify) && sameName.isEmpty()) {
                 model.addAttribute("User", user);
                 userdao.save(user);
-                return "index";
+                return "home";
 
             } else {
                 model.addAttribute("User", user);
@@ -72,8 +72,8 @@ public class UserController {
 
 
         @RequestMapping(value = "login", method = RequestMethod.POST)
-        public String add(Model model, @ModelAttribute User User, HttpServletResponse response) {
-            List<User> u = userdao.findByUsername(User.getUsername());
+        public String add(Model model, @ModelAttribute User user, HttpServletResponse response) {
+            List<User> u = userdao.findByUsername(user.getUsername());
 
             if(u.isEmpty()) {
                 model.addAttribute("message", "Invalid Username");
@@ -82,10 +82,11 @@ public class UserController {
             }
 
             User loggedIn = u.get(0);
-            if(loggedIn.getPassword().equals(User.getPassword())) {
-                Cookie c = new Cookie("User", User.getUsername());
+            if(loggedIn.getPassword().equals(user.getPassword())) {
+                Cookie c = new Cookie("User", user.getUsername());
                 c.setPath("/");
                 response.addCookie(c);
+                //return "redirect:" + "/pop/user/home";
                 return "redirect:/home";
             } else {
                 model.addAttribute("message", "Invalid Password");
@@ -110,5 +111,7 @@ public class UserController {
             return "User/login";
         }
     }
+
+
 
 
