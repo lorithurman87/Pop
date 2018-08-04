@@ -15,11 +15,19 @@ public class Rescue {
     private int id;
 
     @NotNull
+    @Size(min = 3)
+    private String name;
+
+    @NotNull
     @Size(min = 5, max = 20)
     private String username;
 
     @Email
     private String email;
+
+    @NotNull
+    @Size(min = 5, max = 40)
+    private String location;
 
     @NotNull
     @Size(min = 6, max = 25)
@@ -32,6 +40,11 @@ public class Rescue {
     public Rescue() {
 
     }
+
+    public String getName() {return name;}
+
+    public void setName(String name) {this.name = name;}
+
     public String getUsername() {
         return username;
     }
@@ -47,6 +60,10 @@ public class Rescue {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public String getLocation() {return location; }
+
+    public void setLocation(String location) { this.location = location; }
 
     public String getPassword() {
         return password;
