@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head"></head>
+<body>
+<H1 th:text="${title}"></H1>
+<a href="/pop/user/add">Sign Up</a>
+
+
+<form method="post" style="max-width:600px;">
+    <div class="form-group">
+        <label for="username-field">Username</label>
+        <input class="form-control" id="username-field" type="text" name="username" th:value="${username}"/>
+    </div>
+
+    <div class="form-group">
+        <label for="password-field">Password:</label>
+        <input class="form-control" id="password-field" type="password" name="password" />
+    </div>
+    <input type="submit" value="Sign Up" />
+</form>
+
+<span class="error" th:text="${message}"></span>
+
+</body>
+</html>
