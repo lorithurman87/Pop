@@ -20,7 +20,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/pop/user")
 public class UserController {
-    @Autowired 
+    @Autowired
 
     private UserDao userdao;
 
