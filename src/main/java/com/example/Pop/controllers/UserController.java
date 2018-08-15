@@ -14,6 +14,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
+import javax.validation.constraints.Email;
 import java.util.List;
 
 
@@ -58,6 +59,10 @@ public class UserController {
                 if(!sameName.isEmpty()) {
                     model.addAttribute("message", "Username is taken, please select another one");
                 }
+
+                //if (!Email.isEmpty()) {
+                   // model.addAttribute("message", "Please add a valid email address");
+                //}
                 return "User/add";
             }
         }

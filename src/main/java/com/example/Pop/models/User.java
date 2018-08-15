@@ -20,13 +20,14 @@ public class User {
     private String username;
 
     @Email
+    @Size(min=4)//, message = "Please add a valid email address")
     private String email;
 
     @NotNull
-    @Size(min=6, max=25)
+    @Size(min=6, max=25, message = "Please add a password between 6-25 characters")
     private String password;
 
-    //@OneToMany
+    //@OneToMany  @Size(min=1, message = "Description must not be empty")
     //@JoinColumn(name = "user_id")
     //private List<animal> animals;
 
