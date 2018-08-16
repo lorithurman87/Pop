@@ -37,7 +37,7 @@ public class AddAPetController {
     public String index(Model model) {
 
         model.addAttribute("pets", petDao.findAll());
-        model.addAttribute("title", "My Pet");
+        model.addAttribute("title", "Add a pet");
         //model.addAttribute("rescues", RescueDao.findAll());
 
         return "Pet/index";
