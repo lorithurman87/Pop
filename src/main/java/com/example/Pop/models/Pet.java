@@ -99,7 +99,7 @@ public class Pet {
     //@Text
     @NotNull
     @Size(min=1, message = "Please fill out all fields")
-    private Text about;
+    private String about;
 
 
     /*@ManyToOne
@@ -257,11 +257,11 @@ public class Pet {
         this.interests = interests;
     }
 
-    public Text getAbout() {
+    public String getAbout() {
         return about;
     }
 
-    public void setAbout(Text about) {
+    public void setAbout(String about) {
         this.about = about;
     }
 
