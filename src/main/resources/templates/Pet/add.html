@@ -1,121 +1,107 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head th:replace="fragments :: head"></head>
-<body class="container">
-<h1 th:text="${title}">Default Title</h1>
+<body>
+<h1 th:text="${title}">Add a Pet</h1>
 
 <nav th:replace="fragments :: navigation"></nav>
 
-<form method="post" style="max-width:600px;" th:object="${pet}">
+<form method="post" style="max-width:600px;" th:object="${newPet}">
     <div class="form-group">
-        <label th:for="name">Name</label>
-        <input class="form-control" th:field="*{name}" />
-        <span th:errors="*{name}" class="error"></span>
+        <label for="name">Name</label>
+        <input class="form-control" id="name" type="text" name="name" th:value="${name}"/>
+        <!--<span th:errors="*{name}" class="error"></span>-->
     </div>
     <div class="form-group">
-        <label th:for="description">Age</label>
-        <input class="form-control" th:field="*{age}" />
-        <span th:errors="*{age}" class="error"></span>
+        <label for="age">Age</label>
+        <input class="form-control" id="age" type="text" name="age" th:value="${age}"/>
+        <!--<span th:errors="*{age}" class="error"></span>-->
     </div>
     <div class="form-group">
-        <label th:for="description">Size</label>
-        <input class="form-control" th:field="*{size}" />
-        <span th:errors="*{size}" class="error"></span>
+        <label for="size">Size</label>
+        <input class="form-control" id="size" type="text" name="size" th:value="${size}"/>
+        <!--<span th:errors="*{size}" class="error"></span>-->
     </div>
     <div class="form-group">
-    <label th:for="description">Spayed/Neutered</label>
-    <input class="form-control" th:field="*{fixed}" />
-    <span th:errors="*{fixed}" class="error"></span>
+        <label for="fixed">Spayed/Neutered</label>
+        <input class="form-control" id="fixed" type="text" name="fixed" th:value="${fixed}"/>
+        <!--<span th:errors="*{fixed}" class="error"></span>-->
     </div>
     <div class="form-group">
-    <label th:for="description">Ideal Family</label>
-    <input class="form-control" th:field="*{idealFamily}" />
-    <span th:errors="*{idealFamily}" class="error"></span>
+        <label for="idealFamily">Ideal Family</label>
+        <input class="form-control" id="idealFamily" type="text" name="idealFamily" th:value="${idealFamily}"/>
+        <!--/<span th:errors="*{idealFamily}" class="error"></span>-->
     </div>
     <div class="form-group">
-        <label th:for="description">Personality</label>
-        <input class="form-control" th:field="*{personality}" />
-        <span th:errors="*{personality}" class="error"></span>
+        <label for="personality">Personality</label>
+        <input class="form-control" id="personality" type="text" name="personality" th:value="${personality}"/>
     </div>
     <div class="form-group">
-        <label th:for="description">Is the animal vocal</label>
-        <input class="form-control" th:field="*{vocal}" />
-        <span th:errors="*{vocal}" class="error"></span>
+        <label for="vocal">Is the animal vocal</label>
+        <input class="form-control" id="vocal" type="text" name="vocal" th:value="${vocal}"/>
     </div>
     <div class="form-group">
-        <label th:for="description">Species</label>
-        <input class="form-control" th:field="*{species}" />
-        <span th:errors="*{species}" class="error"></span>
+        <label for="species">Species</label>
+        <input class="form-control" id="species" type="text" name="species" th:value="${species}"/>
     </div>
     <div class="form-group">
-        <label th:for="description">Breed</label>
-        <input class="form-control" th:field="*{breed}" />
-        <span th:errors="*{breed}" class="error"></span>
+        <label for="breed">Breed</label>
+        <input class="form-control" id="breed" type="text" name="breed" th:value="${breed}"/>
     </div>
     <div class="form-group">
-        <label th:for="description">Adoption Status</label>
-        <input class="form-control" th:field="*{adoptionStatus}" />
-        <span th:errors="*{adoptionStatus}" class="error"></span>
+        <label for="adoptionStatus">Adoption Status</label>
+        <input class="form-control" id="adoptionStatus" type="text" name="adoptionStatus" th:value="${adoptionStatus}"/>
     </div>
     <div class="form-group">
-        <label th:for="description">Is the animal potty trained</label>
-        <input class="form-control" th:field="*{pottyTrained}" />
-        <span th:errors="*{pottyTrained}" class="error"></span>
+        <label for="pottyTrained">Is the animal potty trained</label>
+        <input class="form-control" id="pottyTrained" type="text" name="pottyTrained" th:value="${pottyTrained}"/>
     </div>
     <div class="form-group">
-        <label th:for="description">Color</label>
-        <input class="form-control" th:field="*{color}" />
-        <span th:errors="*{color}" class="error"></span>
+    <label for="color">Color</label>
+    <input class="form-control" id="color" type="text" name="color" th:value="${color}"/>
     </div>
     <div class="form-group">
-        <label th:for="description">Gender</label>
-        <input class="form-control" th:field="*{gender}" />
-        <span th:errors="*{gender}" class="error"></span>
+    <label for="gender">Gender</label>
+    <input class="form-control" id="gender" type="text" name="gender" th:value="${gender}"/>
     </div>
     <div class="form-group">
-        <label th:for="description">Training/Tricks</label>
-        <input class="form-control" th:field="*{training}" />
-        <span th:errors="*{training}" class="error"></span>
+        <label for="training">Training</label>
+        <input class="form-control" id="training" type="text" name="training" th:value="${training}"/>
     </div>
     <div class="form-group">
-        <label th:for="description">Good with children</label>
-        <input class="form-control" th:field="*{children}" />
-        <span th:errors="*{children}" class="error"></span>
+        <label for="children">Good with children</label>
+        <input class="form-control" id="children" type="text" name="children" th:value="${children}"/>
     </div>
     <div class="form-group">
-        <label th:for="description">Good with cats</label>
-        <input class="form-control" th:field="*{cats}" />
-        <span th:errors="*{cats}" class="error"></span>
+        <label for="cats">Good with cats</label>
+        <input class="form-control" id="cats" type="text" name="cat" th:value="${cat}"/>
     </div>
     <div class="form-group">
-        <label th:for="description">Dog friendly</label>
-        <input class="form-control" th:field="*{dogFriendly}" />
-        <span th:errors="*{dogFriendly}" class="error"></span>
+        <label for="dogFriendly">Dog friendly</label>
+        <input class="form-control" id="dogFriendly" type="text" name="dogFriendly" th:value="${dogFriendly}"/>
     </div>
     <div class="form-group">
-        <label th:for="description">Rescue name</label>
-        <input class="form-control" th:field="*{rescue}" />
-        <span th:errors="*{rescue}" class="error"></span>
+        <label for="rescue">Rescue name</label>
+        <input class="form-control" id="rescue" type="text" name="rescue" th:value="${rescue}"/>
     </div>
     <div class="form-group">
-        <label th:for="description">Location</label>
-        <input class="form-control" th:field="*{location}" />
-        <span th:errors="*{location}" class="error"></span>
+        <label for="location">Location</label>
+        <input class="form-control" id="location" type="text" name="location" th:value="${location}"/>
     </div>
     <div class="form-group">
-        <label th:for="description">Interests</label>
-        <input class="form-control" th:field="*{interests}" />
-        <span th:errors="*{interests}" class="error"></span>
+        <label for="interests">Interests</label>
+        <input class="form-control" id="interests" type="text" name="interests" th:value="${interests}"/>
     </div>
     <div class="form-group">
-        <label th:for="description">About</label>
-        <input class="form-control" th:field="*{about}" />
-        <span th:errors="*{about}" class="error"></span>
+        <label for="about">About</label>
+        <input class="form-control" id="about" type="text" name="about" th:value="${about}"/>
     </div>
 
 
     <input type="submit" value="Add Pet" />
 </form>
+
+<span class="error" th:text="${message}"></span>
 
 </body>
 </html>

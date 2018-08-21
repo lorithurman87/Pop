@@ -87,6 +87,7 @@ public class RescueController {
             c.setPath("/");
             response.addCookie(c);
             return "redirect:" + "/pop/rescue/Home";
+            //return "redirect:" + "/pop/rescue/rescueHome";
             //return "redirect:/home";
         } else {
             model.addAttribute("message", "Invalid Password");

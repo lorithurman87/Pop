@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.Valid;
+import java.util.List;
 import java.util.Locale;
 
 
@@ -38,33 +39,42 @@ public class AddAPetController {
 
         model.addAttribute("pets", petDao.findAll());
         model.addAttribute("title", "Add a pet");
-        //model.addAttribute("rescues", RescueDao.findAll());
+        //model.addAttribute("rescues", rescueDao.findAll());
 
-        return "Pet/index";
+        return "Pet/add";
     }
 
     @RequestMapping(value = "add", method = RequestMethod.GET)
     public String displayAddAPetForm(Model model) {
         model.addAttribute("title", "Add Pet");
         model.addAttribute(new Pet());
-        model.addAttribute("rescue", rescueDao.findAll());
+        //model.addAttribute("rescue", rescueDao.findAll());
         return "Pet/add";
     }
 
     @RequestMapping(value = "add", method = RequestMethod.POST)
     public String processAddAPetForm(@ModelAttribute  @Valid Pet newPet,
-                                       Errors errors, @RequestParam int RescueId, Model model) {
+                                       Errors errors, Model model) {
+
+        //List<Pet> newPet = petDao.findById(Pet.getId());
 
         if (errors.hasErrors()) {
             model.addAttribute("title", "Add Pet");
-            //model.addAttribute("rescues", RescueDao.findAll());
+            model.addAttribute("message", "Please fill out all fields");
+            model.addAttribute("newPet", newPet);
+            //model.addAttribute("rescues", rescueDao.findAll());
             return "Pet/add";
         }
         //Rescue pet = RescueDao.findOne(rescueId);
-        //newPet.setRescue(pet);
+        //newPet.setRescue(newPet);
 
-        petDao.save(newPet);
-        return "redirect:";
+
+        //newPet = petDao.findById(Pet.getId());
+
+        //petDao.save(newPet);
+        newPet = petDao.save(newPet);
+        //return "redirect:";
+        return "redirect:" + "/pop/Pet/add";
     }
 
     /*@RequestMapping(value = "remove", method = RequestMethod.GET)

@@ -17,99 +17,106 @@ public class Pet {
     private int id;
 
     @NotNull
-    @Size(min=3, max=30, message = "Please fill out all fields")
+    //@Size(min=3, message = "Please fill out name")
     private String name;
 
     @NotNull
-    @Size(min=1, message = "Please fill out all fields")
-    private int age;
+    //@Size(min=1, message = "Please fill out age")
+    private String age;
 
     @NotNull
-    @Size(min=1, message = "Please fill out all fields")
+    //@Size(min=1, message = "Please fill out size")
     private String size;
 
     @NotNull
-    @Size(min=2, message = "Please fill out all fields")
+    //@Size(min=1, message = "Please fill out all fixed")
     private String fixed;
 
     @NotNull
-    @Size(min=1, message = "Please fill out all fields")
+    //@Size(min=1, message = "Please fill out all family")
     private String idealFamily;
 
     @NotNull
-    @Size(min=3, message = "Please fill out all fields")
+    //@Size(min=1, message = "Please fill out all personality")
     private String personality;
 
     @NotNull
-    @Size(min=1, message = "Please fill out all fields")
+    //@Size(min=1, message = "Please fill out all vocal")
     private String vocal;
 
     @NotNull
-    @Size(min=1, message = "Please fill out all fields")
+    //@Size(min=1, message = "Please fill out all species")
     private String species;
 
     @NotNull
-    @Size(min=1, message = "Please fill out all fields")
+    //@Size(min=1, message = "Please fill out all breed")
     private String breed;
 
     @NotNull
-    @Size(min=1, message = "Please fill out all fields")
+    //@Size(min=1, message = "Please fill out all status")
     private String adoptionStatus;
 
     @NotNull
-    @Size(min=1, message = "Please fill out all fields")
+    //@Size(min=1, message = "Please fill out all pottytrained")
     private String pottyTrained;
 
     @NotNull
-    @Size(min=1, message = "Please fill out all fields")
+    //@Size(min=1, message = "Please fill out all color")
     private String color;
 
     @NotNull
-    @Size(min=1, message = "Please fill out all fields")
+    //@Size(min=1, message = "Please fill out all gender")
     private String gender;
 
     @NotNull
-    @Size(min=1, message = "Please fill out all fields")
+    //@Size(min=1, message = "Please fill out all training")
     private String training;
 
     @NotNull
-    @Size(min=1, message = "Please fill out all fields")
+    //@Size(min=1, message = "Please fill out all children")
     private String children;
 
     @NotNull
-    @Size(min=1, message = "Please fill out all fields")
+    //@Size(min=1, message = "Please fill out all cats")
     private String cats;
 
     @NotNull
-    @Size(min=1, message = "Please fill out all fields")
+    //@Size(min=1, message = "Please fill out all dogfriendly")
     private String dogFriendly;
 
     @NotNull
-    @Size(min=1, message = "Please fill out all fields")
+    //@Size(min=1, message = "Please fill out all rescue")
     private String rescue;
 
     @NotNull
-    @Size(min=1, message = "Please fill out all fields")
+    //@Size(min=1, message = "Please fill out all location")
     private String location;
 
     @NotNull
-    @Size(min=1, message = "Please fill out all fields")
+    //@Size(min=1, message = "Please fill out all interests")
     private String interests;
 
-    //@Text
     @NotNull
-    @Size(min=1, message = "Please fill out all fields")
+    //@Size(min=1, message = "Please fill out about")
     private String about;
 
 
     /*@ManyToOne
     private Rescue Rescue; */
 
-    public int getAge() {
+    public int getId() { return id; }
+
+    public String getName() { return name; }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
@@ -265,14 +272,6 @@ public class Pet {
         this.about = about;
     }
 
-    public String getName() {
-        return name;
-
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 }
 
 

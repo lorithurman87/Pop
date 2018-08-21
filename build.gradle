@@ -39,16 +39,18 @@ dependencies {
 	compile('mysql:mysql-connector-java')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	testCompile('org.springframework.security:spring-security-test')
-}
 
-dependencyManagement {
-	imports {
-		mavenBom "de.codecentric:spring-boot-admin-dependencies:${springBootAdminVersion}"
+
+
+	dependencyManagement {
+		imports {
+			mavenBom "de.codecentric:spring-boot-admin-dependencies:${springBootAdminVersion}"
+		}
 	}
-}
 
 /*
-bootRun {
-	addResources = true
+	bootRun {
+		addResources = true
+	}
+}*/
 }
-*/
