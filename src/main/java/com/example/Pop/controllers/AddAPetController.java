@@ -58,15 +58,18 @@ public class AddAPetController {
 
         //List<Pet> newPet = petDao.findById(Pet.getId());
 
-        if (errors.hasErrors()) {
+        System.out.println(newPet.getName());
+         if (errors.hasErrors()) {
             model.addAttribute("title", "Add Pet");
-            model.addAttribute("message", "Please fill out all fields");
+            //model.addAttribute("message", "Please fill out all fields");
             model.addAttribute("newPet", newPet);
             //model.addAttribute("rescues", rescueDao.findAll());
             return "Pet/add";
         }
-        //Rescue pet = RescueDao.findOne(rescueId);
-        //newPet.setRescue(newPet);
+
+
+        // Rescue pet = RescueDao.findOne(rescueId);
+        // newPet.setRescue(newPet);
 
 
         //newPet = petDao.findById(Pet.getId());
@@ -74,7 +77,7 @@ public class AddAPetController {
         //petDao.save(newPet);
         newPet = petDao.save(newPet);
         //return "redirect:";
-        return "redirect:" + "/pop/Pet/add";
+        return "redirect:" + "/pop/rescue/Home";
     }
 
     /*@RequestMapping(value = "remove", method = RequestMethod.GET)

@@ -17,87 +17,87 @@ public class Pet {
     private int id;
 
     @NotNull
-    //@Size(min=3, message = "Please fill out name")
+    @Size(min=3, message = "Please fill out name")
     private String name;
 
     @NotNull
-    //@Size(min=1, message = "Please fill out age")
+    @Size(min=1, message = "Please fill out age")
     private String age;
 
     @NotNull
-    //@Size(min=1, message = "Please fill out size")
+    @Size(min=1, message = "Please fill out size")
     private String size;
 
     @NotNull
-    //@Size(min=1, message = "Please fill out all fixed")
+    @Size(min=1, message = "Please fill out field")
     private String fixed;
 
     @NotNull
-    //@Size(min=1, message = "Please fill out all family")
+    @Size(min=1, message = "Please fill out field")
     private String idealFamily;
 
     @NotNull
-    //@Size(min=1, message = "Please fill out all personality")
+    @Size(min=1, message = "Please fill out field")
     private String personality;
 
     @NotNull
-    //@Size(min=1, message = "Please fill out all vocal")
+    @Size(min=1, message = "Please fill out field")
     private String vocal;
 
     @NotNull
-    //@Size(min=1, message = "Please fill out all species")
+    @Size(min=1, message = "Please fill out field")
     private String species;
 
     @NotNull
-    //@Size(min=1, message = "Please fill out all breed")
+    @Size(min=1, message = "Please fill out field")
     private String breed;
 
     @NotNull
-    //@Size(min=1, message = "Please fill out all status")
+    @Size(min=1, message = "Please fill out field")
     private String adoptionStatus;
 
     @NotNull
-    //@Size(min=1, message = "Please fill out all pottytrained")
+    @Size(min=1, message = "Please fill out field")
     private String pottyTrained;
 
     @NotNull
-    //@Size(min=1, message = "Please fill out all color")
+    @Size(min=1, message = "Please fill out field")
     private String color;
 
     @NotNull
-    //@Size(min=1, message = "Please fill out all gender")
+    @Size(min=1, message = "Please fill out field")
     private String gender;
 
     @NotNull
-    //@Size(min=1, message = "Please fill out all training")
+    @Size(min=1, message = "Please fill out field")
     private String training;
 
     @NotNull
-    //@Size(min=1, message = "Please fill out all children")
+    @Size(min=1, message = "Please fill out field")
     private String children;
 
     @NotNull
-    //@Size(min=1, message = "Please fill out all cats")
+    @Size(min=1, message = "Please fill out field")
     private String cats;
 
     @NotNull
-    //@Size(min=1, message = "Please fill out all dogfriendly")
+    @Size(min=1, message = "Please fill out field")
     private String dogFriendly;
 
     @NotNull
-    //@Size(min=1, message = "Please fill out all rescue")
+    @Size(min=1, message = "Please fill out field")
     private String rescue;
 
     @NotNull
-    //@Size(min=1, message = "Please fill out all location")
+    @Size(min=1, message = "Please fill out field")
     private String location;
 
     @NotNull
-    //@Size(min=1, message = "Please fill out all interests")
+    @Size(min=1, message = "Please fill out field")
     private String interests;
 
     @NotNull
-    //@Size(min=1, message = "Please fill out about")
+    @Size(min=1, message = "Please fill out field")
     private String about;
 
 

@@ -46,6 +46,7 @@ public class RescueController {
             return "redirect:" + "/pop/rescue/Home";
 
         } else {
+
             model.addAttribute("Rescue", rescue);
             model.addAttribute("title", "Rescue Signup");
 
