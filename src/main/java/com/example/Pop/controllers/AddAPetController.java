@@ -1,12 +1,6 @@
 package com.example.Pop.controllers;
 
-
-//import com.example.Pop.models.Category;
-//import org.launchcode.models.Cheese;
-//import org.launchcode.models.data.CategoryDao;
-//import org.launchcode.models.data.CheeseDao;
 import com.example.Pop.models.Pet;
-import com.example.Pop.models.Rescue;
 import com.example.Pop.models.data.PetDao;
 import com.example.Pop.models.data.RescueDao;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +10,7 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-
 import javax.validation.Valid;
-import java.util.List;
-import java.util.Locale;
 
 
 @Controller
@@ -61,24 +51,31 @@ public class AddAPetController {
         System.out.println(newPet.getName());
          if (errors.hasErrors()) {
             model.addAttribute("title", "Add Pet");
-            //model.addAttribute("message", "Please fill out all fields");
+            model.addAttribute("message", "Please fill out all fields");
             model.addAttribute("newPet", newPet);
             //model.addAttribute("rescues", rescueDao.findAll());
             return "Pet/add";
         }
-
-
-        // Rescue pet = RescueDao.findOne(rescueId);
-        // newPet.setRescue(newPet);
-
 
         //newPet = petDao.findById(Pet.getId());
 
         //petDao.save(newPet);
         newPet = petDao.save(newPet);
         //return "redirect:";
-        return "redirect:" + "/pop/rescue/Home";
+        //return "redirect:" + "/pop/rescue/Home";
+        return "redirect:" + "/pop/Pet/indexview";
     }
+
+
+//    RequestMapping(value = "indexview", method = RequestMethod.GET) {
+//    public String displayViewPetForm(Model model){
+//            model.addAttribute("title", "Available Pets");
+//            model.addAttribute("pets", petDao.findAll());
+//
+//            return "Pet/indexview";
+//        }
+
+
 
     /*@RequestMapping(value = "remove", method = RequestMethod.GET)
     public String displayRemovePetForm(Model model) {
