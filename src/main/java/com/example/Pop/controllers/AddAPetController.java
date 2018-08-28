@@ -7,10 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
+
 import javax.validation.Valid;
+
 
 
 @Controller
@@ -47,7 +47,7 @@ public class AddAPetController {
                                        Errors errors, Model model) {
 
         //List<Pet> newPet = petDao.findById(Pet.getId());
-
+        //System out println(errors);
         System.out.println(newPet.getName());
          if (errors.hasErrors()) {
             model.addAttribute("title", "Add Pet");
@@ -57,23 +57,34 @@ public class AddAPetController {
             return "Pet/add";
         }
 
+
         //newPet = petDao.findById(Pet.getId());
 
         //petDao.save(newPet);
         newPet = petDao.save(newPet);
         //return "redirect:";
-        //return "redirect:" + "/pop/rescue/Home";
-        return "redirect:" + "/pop/Pet/indexview";
+        return "redirect:" + "/pop/rescue/Home";
+        //return "redirect:" + "/pop/pet/view";
+    }
+
+    @RequestMapping(value = "view", method = RequestMethod.GET)
+    public String displayViewPetForm(Model model) {
+        model.addAttribute("pets", petDao.findAll());
+        model.addAttribute("title", "Available Pet");
+        return "Pet/view";
     }
 
 
-//    RequestMapping(value = "indexview", method = RequestMethod.GET) {
-//    public String displayViewPetForm(Model model){
-//            model.addAttribute("title", "Available Pets");
-//            model.addAttribute("pets", petDao.findAll());
-//
-//            return "Pet/indexview";
-//        }
+    @RequestMapping(value = "viewOne/{petId}", method = RequestMethod.GET)
+        public String displayViewOnePetForm(Model model, @PathVariable int petId) {
+        model.addAttribute("Pet", petDao.findById(petId));
+        //model.addAttribute("title", petDao.findById(petId).get(petId).getName());
+        model.addAttribute("title", "I'm looking for a Home" );
+
+        return "Pet/viewOne";
+
+    } 
+
 
 
 
