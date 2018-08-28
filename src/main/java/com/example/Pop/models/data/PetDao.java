@@ -12,5 +12,6 @@ import java.util.List;
 @Transactional
 public interface PetDao extends CrudRepository<Pet, Integer> {
 
-    public List<Pet> findById(int petId);
+    public Pet findById(int petId);
+    //public List<Pet> findOne(int petId);
 }

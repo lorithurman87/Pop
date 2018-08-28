@@ -8,64 +8,15 @@
 
 <nav th:replace="fragments :: navigation"></nav>
 
-<p th:unless="${Pets} and ${Pet.size()}">No pets currently available. Check back soon! </p>
+<p th:unless="${pets} and ${pets.size()}">No pets currently available. Check back soon! </p>
 
-<!--<p><img src="Pictures/pop_pictures/Trooper" width="420px" height="419px" alt="being cute"/> </p>-->
+<!--<p><img th:src="@{~/static/images/Trooper.jpg}" width="420px" height="419px" alt="being cute"/> </p>-->
 
 <table class="table">
-
-    <tr>
-        <th>Name</th>
-        <th>Age</th>
-        <th>Size</th>
-        <th>Spayed/Neutered</th>
-        <th>Ideal Family</th>
-        <th>Personality</th>
-        <th>Vocal</th>
-        <th>Species</th>
-        <th>Breed</th>
-        <th>Adoption Status</th>
-        <th>Potty trained</th>
-        <th>Color</th>
-        <th>Gender</th>
-        <th>Training/Tricks</th>
-        <th>Good with children</th>
-        <th>Good with cats</th>
-        <th>Dog friendly</th>
-        <th>Rescue name</th>
-        <th>Location</th>
-        <th>Interests</th>
-        <th>About</th>
-
-
+    <tr th:each="Pet : ${pets}">
+    <td><h2><a th:href="'/pop/pet/viewOne/' + ${Pet.id} + ''" th:text="${Pet.name}"></a></h2></td>
+    <!--<td th:text="${pet.pic}"></td>-->
     </tr>
-
-    <tr th:each="Pet : ${Pets}">
-        <td th:text="${Pet.name}"></td>
-        <td th:text="${Pet.age}"></td>
-        <td th:text="${Pet.size}"></td>
-        <td th:text="${Pet.fixed}"></td>
-        <td th:text="${Pet.idealFamily}"></td>
-        <td th:text="${Pet.personality}"></td>
-        <td th:text="${Pet.vocal}"></td>
-        <td th:text="${Pet.species}"></td>
-        <td th:text="${Pet.breed}"></td>
-        <td th:text="${Pet.adoptionStatus}"></td>
-        <td th:text="${Pet.pottyTrained}"></td>
-        <td th:text="${Pet.color}"></td>
-        <td th:text="${Pet.gender}"></td>
-        <td th:text="${Pet.training}"></td>
-        <td th:text="${Pet.children}"></td>
-        <td th:text="${Pet.cats}"></td>
-        <td th:text="${Pet.dogFriendly}"></td>
-        <td th:text="${Pet.rescue}"></td>
-        <td th:text="${Pet.location}"></td>
-        <td th:text="${Pet.interests}"></td>
-        <td th:text="${Pet.about}"></td>
-
-
-    </tr>
-
 </table>
 <!--<a href="/cheese/add">Add</a> |-->
 <!--<a href="/cheese/remove">Remove</a>-->

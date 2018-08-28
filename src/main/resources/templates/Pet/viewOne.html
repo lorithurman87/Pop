@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<body>
+
+<h1 th:text="${title}">Default Title</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<!--<p th:unless="${Pets} and ${Pet.size()}">No pets currently available. Check back soon! </p>-->
+
+<!--<p><img src="Pictures/pop_pictures/Trooper" width="420px" height="419px" alt="being cute"/> </p>-->
+
+<!--<div th:switch="${pet.name}">-->
+    <!--<div th:case="Bentley">-->
+        <!--<Img th:src="@{~/static/images/Bentley.jpg}">-->
+    <!--</div>-->
+    <!--<div th:case="Elvis">-->
+    <!--<Img th:src="@{~/static/images/Elvis.jpg}">-->
+    <!--</div>-->
+<!--</div>-->
+
+<table class="table">
+
+    <tr><th>Name</th><td th:text="${Pet.name}"></td></tr>
+    <tr><th>Age</th><td th:text="${Pet.age}"></td></tr>
+    <tr><th>Size</th><td th:text="${Pet.size}"></td></tr>
+    <tr><th>Spayed/Neutered</th><td th:text="${Pet.fixed}"></td></tr>
+    <tr><th>Ideal Family</th><td th:text="${Pet.idealFamily}"></td></tr>
+    <tr><th>Personality</th><td th:text="${Pet.personality}"></td></tr>
+    <tr><th>Vocal</th><td th:text="${Pet.vocal}"></td></tr>
+    <tr><th>Species</th><td th:text="${Pet.species}"></td></tr>
+    <tr><th>Breed</th><td th:text="${Pet.breed}"></td></tr>
+    <tr><th>Adoption Status</th><td th:text="${Pet.adoptionStatus}"></td></tr>
+    <tr><th>Potty trained</th><td th:text="${Pet.training}"></td></tr>
+    <tr><th>Color</th><td th:text="${Pet.color}"></td></tr>
+    <tr><th>Gender</th><td th:text="${Pet.gender}"></td></tr>
+    <tr><th>Training/Tricks</th><td th:text="${Pet.training}"></td></tr>
+    <tr><th>Good with children</th><td th:text="${Pet.children}"></td></tr>
+    <tr><th>Good with cats</th><td th:text="${Pet.cats}"></td></tr>
+    <tr><th>Dog friendly</th><td th:text="${Pet.dogFriendly}"></td></tr>
+    <tr><th>Rescue name</th><td th:text="${Pet.rescue}"></td></tr>
+    <tr><th>Location</th><td th:text="${Pet.location}"></td></tr>
+    <tr><th>Interests</th><td th:text="${Pet.interests}"></td></tr>
+    <tr><th>About</th><td th:text="${Pet.about}"></td</tr>
+
+
+<tr>
+    <!--<tr th:each="Pet : ${Pets}">-->
+        <!--<td th:text="${Pet.name}"></td>-->
+        <!--<td th:text="${Pet.age}"></td>-->
+        <!--<td th:text="${Pet.size}"></td>-->
+        <!--<td th:text="${Pet.fixed}"></td>-->
+        <!--<td th:text="${Pet.idealFamily}"></td>-->
+        <!--<td th:text="${Pet.personality}"></td>-->
+        <!--<td th:text="${Pet.vocal}"></td>-->
+        <!--<td th:text="${Pet.species}"></td>-->
+        <!--<td th:text="${Pet.breed}"></td>-->
+        <!--<td th:text="${Pet.adoptionStatus}"></td>-->
+        <!--<td th:text="${Pet.pottyTrained}"></td>-->
+        <!--<td th:text="${Pet.color}"></td>-->
+        <!--<td th:text="${Pet.gender}"></td>-->
+        <!--<td th:text="${Pet.training}"></td>-->
+        <!--<td th:text="${Pet.children}"></td>-->
+        <!--<td th:text="${Pet.cats}"></td>-->
+        <!--<td th:text="${Pet.dogFriendly}"></td>-->
+        <!--<td th:text="${Pet.rescue}"></td>-->
+        <!--<td th:text="${Pet.location}"></td>-->
+        <!--<td th:text="${Pet.interests}"></td>-->
+        <!--<td th:text="${Pet.about}"></td>-->
+
+
+    </tr>
+
+</table>
+<!--<a href="/cheese/add">Add</a> |-->
+<!--<a href="/cheese/remove">Remove</a>-->
+
+
+</body>
+</html>

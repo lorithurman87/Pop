@@ -91,7 +91,7 @@ public class UserController {
                 Cookie c = new Cookie("User", user.getUsername());
                 c.setPath("/");
                 response.addCookie(c);
-                return "redirect:" + "/pop/user/home";
+                return "redirect:" + "/pop/pet/view";
                 //return "redirect:/home";
             } else {
                 model.addAttribute("message", "Invalid Password");
@@ -116,6 +116,7 @@ public class UserController {
             return "User/login";
         }
     }
+
 
 
 

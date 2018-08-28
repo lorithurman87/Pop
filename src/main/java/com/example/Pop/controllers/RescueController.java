@@ -110,6 +110,6 @@ public class RescueController {
                 response.addCookie(c);
             }
         }
-        return "Rescue/register";
+        return "Rescue/signIn";
     }
 }

@@ -100,6 +100,8 @@ public class Pet {
     @Size(min=1, message = "Please fill out field")
     private String about;
 
+//    private String imageLocation;
+
 
     /*@ManyToOne
     private Rescue Rescue; */
@@ -271,6 +273,10 @@ public class Pet {
     public void setAbout(String about) {
         this.about = about;
     }
+
+//    public String getImageLocation() { return imageLocation; }
+//
+//    public void setImageLocation(String imageLocation) { this.imageLocation = imageLocation; }
 
 }
 

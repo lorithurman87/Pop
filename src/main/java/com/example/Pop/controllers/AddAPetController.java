@@ -63,8 +63,8 @@ public class AddAPetController {
         //petDao.save(newPet);
         newPet = petDao.save(newPet);
         //return "redirect:";
-        return "redirect:" + "/pop/rescue/Home";
-        //return "redirect:" + "/pop/pet/view";
+        //return "redirect:" + "/pop/rescue/Home";
+        return "redirect:" + "/pop/pet/view";
     }
 
     @RequestMapping(value = "view", method = RequestMethod.GET)
@@ -83,7 +83,8 @@ public class AddAPetController {
 
         return "Pet/viewOne";
 
-    } 
+    }
+
 
 
 
