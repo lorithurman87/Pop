@@ -44,7 +44,8 @@ public class UserController {
             if(!errors.hasErrors() && user.getPassword().equals(verify) && sameName.isEmpty()) {
                 model.addAttribute("User", user);
                 userdao.save(user);
-                return "redirect:" + "/pop/user/home";
+                //return "redirect:" + "/pop/user/home";
+                return "redirect:" + "/pop/pet/view";
 
             } else {
                 model.addAttribute("User", user);
