@@ -89,6 +89,9 @@ public class Pet {
     private String rescue;
 
     @NotNull
+    private String contactPet;
+
+    @NotNull
     @Size(min=1, message = "Please fill out field")
     private String location;
 
@@ -249,6 +252,10 @@ public class Pet {
     public void setRescue(String rescue) {
         this.rescue = rescue;
     }
+
+    public String getContactPet() {return contactPet; }
+
+    public void contactPet(String rescue) { this.contactPet = contactPet; }
 
     public String getLocation() {
         return location;
