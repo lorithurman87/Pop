@@ -19,7 +19,7 @@ public class HelloController {
 
         model.addAttribute("title", "Welcome to Pop!!");
         model.addAttribute("aBitAbout",aBitAbout);
-        return "index";
+        return "index"; 
     }
 
     @RequestMapping(value = "user/home", method = RequestMethod.GET)
