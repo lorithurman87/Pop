@@ -5,19 +5,40 @@
 <body>
 
 <h1 th:text="${title}">Default Title</h1>
+<a href="/pop/pet/view">View all pets</a>
+<a href="/pop/user/logout">Logout</a>
+
 
 <nav th:replace="fragments :: navigation"></nav>
-
+ 
 <!--<p th:unless="${Pets} and ${Pet.size()}">No pets currently available. Check back soon! </p>-->
 
 <!--<p><img src="Pictures/pop_pictures/Trooper" width="420px" height="419px" alt="being cute"/> </p>-->
 
 <!--<div th:switch="${pet.name}">-->
-    <!--<div th:case="Bentley">-->
+    <!--<div th:case="'Bentley'">-->
         <!--<Img th:src="@{~/static/images/Bentley.jpg}">-->
     <!--</div>-->
-    <!--<div th:case="Elvis">-->
-    <!--<Img th:src="@{~/static/images/Elvis.jpg}">-->
+    <!--<div th:case="'Elvis'">-->
+        <!--<Img th:src="@{~/static/images/Elvis.jpg}">-->
+    <!--</div>-->
+    <!--<div th:case="'Emma2'">-->
+        <!--<Img th:src="@{~/static/images/Emma2.jpg}">-->
+    <!--</div>-->
+    <!--<div th:case="'Josie'">-->
+        <!--<Img th:src="@{~/static/images/Josie.jpg}">-->
+    <!--</div>-->
+    <!--<div th:case="'Meatloaf'">-->
+        <!--<Img th:src="@{~/static/images/Meatloaf.jpg}">-->
+    <!--</div>-->
+    <!--<div th:case="'Smokey'">-->
+        <!--<Img th:src="@{~/static/images/Smokey.jpg}">-->
+    <!--</div>-->
+    <!--<div th:case="'Tara'">-->
+        <!--<Img th:src="@{~/static/images/Tara.jpg}">-->
+    <!--</div>-->
+    <!--<div th:case="'Trooper'">-->
+        <!--<Img th:src="@{~/static/images/Trooper.jpg}">-->
     <!--</div>-->
 <!--</div>-->
 
@@ -48,35 +69,13 @@
 
 
 <tr>
-    <!--<tr th:each="Pet : ${Pets}">-->
-        <!--<td th:text="${Pet.name}"></td>-->
-        <!--<td th:text="${Pet.age}"></td>-->
-        <!--<td th:text="${Pet.size}"></td>-->
-        <!--<td th:text="${Pet.fixed}"></td>-->
-        <!--<td th:text="${Pet.idealFamily}"></td>-->
-        <!--<td th:text="${Pet.personality}"></td>-->
-        <!--<td th:text="${Pet.vocal}"></td>-->
-        <!--<td th:text="${Pet.species}"></td>-->
-        <!--<td th:text="${Pet.breed}"></td>-->
-        <!--<td th:text="${Pet.adoptionStatus}"></td>-->
-        <!--<td th:text="${Pet.pottyTrained}"></td>-->
-        <!--<td th:text="${Pet.color}"></td>-->
-        <!--<td th:text="${Pet.gender}"></td>-->
-        <!--<td th:text="${Pet.training}"></td>-->
-        <!--<td th:text="${Pet.children}"></td>-->
-        <!--<td th:text="${Pet.cats}"></td>-->
-        <!--<td th:text="${Pet.dogFriendly}"></td>-->
-        <!--<td th:text="${Pet.rescue}"></td>-->
-        <!--<td th:text="${Pet.location}"></td>-->
-        <!--<td th:text="${Pet.interests}"></td>-->
-        <!--<td th:text="${Pet.about}"></td>-->
+
 
 
     </tr>
 
 </table>
-<!--<a href="/cheese/add">Add</a> |-->
-<!--<a href="/cheese/remove">Remove</a>-->
+
 
 
 </body>

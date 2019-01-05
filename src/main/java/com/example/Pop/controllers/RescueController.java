@@ -43,7 +43,8 @@ public class RescueController {
         if(!errors.hasErrors() && rescue.getPassword().equals(verify) && sameName.isEmpty()) {
             model.addAttribute("Rescue", rescue);
             rescuedao.save(rescue);
-            return "redirect:" + "/pop/rescue/Home";
+            //return "redirect:" + "/pop/rescue/Home";
+            return "redirect:" + "/pop/pet/add";
 
         } else {
 
@@ -87,9 +88,10 @@ public class RescueController {
             Cookie c = new Cookie("Rescue", rescue.getUsername());
             c.setPath("/");
             response.addCookie(c);
-            return "redirect:" + "/pop/rescue/Home";
+            //return "redirect:" + "/pop/rescue/Home";
             //return "redirect:" + "/pop/rescue/rescueHome";
             //return "redirect:/home";
+            return "redirect:" + "/pop/pet/add";
         } else {
             model.addAttribute("message", "Invalid Password");
             model.addAttribute("title", "Login");
@@ -110,6 +112,7 @@ public class RescueController {
                 response.addCookie(c);
             }
         }
-        return "Rescue/signIn";
+        //return "Rescue/signIn";
+        return "redirect:" + "/pop/rescue/signIn";
     }
 }

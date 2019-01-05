@@ -19,7 +19,7 @@ public class HelloController {
 
         model.addAttribute("title", "Welcome to Pop!!");
         model.addAttribute("aBitAbout",aBitAbout);
-        return "index"; 
+        return "index";
     }
 
     @RequestMapping(value = "user/home", method = RequestMethod.GET)
@@ -35,44 +35,5 @@ public class HelloController {
     }
 
 
-
-    /*@RequestMapping(value = "add", method = RequestMethod.GET)
-    public String displaySignUpForm(Model model) {
-
-        model.addAttribute("title", "Welcome to Pop!!");
-        model.addAttribute("userName", "Username: ");
-        model.addAttribute("passWord", "Password: ");
-        model.addAttribute("eMail", "E-mail: ");
-        model.addAttribute("location", "Location: ");
-        return "User/add";
-    }
-
-
-    @RequestMapping(value = "login", method = RequestMethod.GET)
-    public String displayLogInForm(Model model) {
-
-        model.addAttribute("title", "Welcome to Pop!!");
-        model.addAttribute("userName", "Username: ");
-        model.addAttribute("passWord", "Password: ");
-        return "User/logIn";
-    }
-
-
-    @RequestMapping(value = "login", method = RequestMethod.POST)
-    public String processLogInForm(Model model) {
-
-        //model.addAttribute("title", "Welcome to Pop!!");
-
-        return "";
-    }
-
-
-    @RequestMapping(value = "add", method = RequestMethod.POST)
-    public String processSignUpForm(Model model) {
-
-        //model.addAttribute("title", "Welcome to Pop!!");
-
-        return "";
-    }*/
 
 }

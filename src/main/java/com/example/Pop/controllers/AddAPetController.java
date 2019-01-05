@@ -23,13 +23,11 @@ public class AddAPetController {
     @Autowired
     private RescueDao rescueDao;
 
-    //Request path: /pets
     @RequestMapping(value = "")
     public String index(Model model) {
 
         model.addAttribute("pets", petDao.findAll());
         model.addAttribute("title", "Add a pet");
-        //model.addAttribute("rescues", rescueDao.findAll());
 
         return "Pet/add";
     }
@@ -38,7 +36,6 @@ public class AddAPetController {
     public String displayAddAPetForm(Model model) {
         model.addAttribute("title", "Add Pet");
         model.addAttribute(new Pet());
-        //model.addAttribute("rescue", rescueDao.findAll());
         return "Pet/add";
     }
 
@@ -46,24 +43,17 @@ public class AddAPetController {
     public String processAddAPetForm(@ModelAttribute  @Valid Pet newPet,
                                        Errors errors, Model model) {
 
-        //List<Pet> newPet = petDao.findById(Pet.getId());
-        //System out println(errors);
+
         System.out.println(newPet.getName());
          if (errors.hasErrors()) {
             model.addAttribute("title", "Add Pet");
             model.addAttribute("message", "Please fill out all fields");
             model.addAttribute("newPet", newPet);
-            //model.addAttribute("rescues", rescueDao.findAll());
             return "Pet/add";
         }
 
 
-        //newPet = petDao.findById(Pet.getId());
-
-        //petDao.save(newPet);
         newPet = petDao.save(newPet);
-        //return "redirect:";
-        //return "redirect:" + "/pop/rescue/Home";
         return "redirect:" + "/pop/pet/view";
     }
 
@@ -86,24 +76,5 @@ public class AddAPetController {
     }
 
 
-
-
-
-    /*@RequestMapping(value = "remove", method = RequestMethod.GET)
-    public String displayRemovePetForm(Model model) {
-        model.addAttribute("pets", petDao.findAll());
-        model.addAttribute("title", "Remove Pet");
-        return "Pet/remove";
-    }
-
-    @RequestMapping(value = "remove", method = RequestMethod.POST)
-    public String processRemovePetForm(@RequestParam int[] petIds) {
-
-        for (int petId : petIds) {
-            petDao.delete(petId);
-        }
-
-        return "redirect:";
-    }*/
 
 }

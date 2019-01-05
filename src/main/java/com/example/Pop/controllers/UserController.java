@@ -114,7 +114,8 @@ public class UserController {
                     response.addCookie(c);
                 }
             }
-            return "User/login";
+            //return "User/login";
+            return "redirect:" + "/pop/user/login";
         }
     }
 
