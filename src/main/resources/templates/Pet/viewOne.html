@@ -81,15 +81,18 @@
 
 </table>
 
-<!--<img th:src="@{~/images/{Pet.name}.jpg}" width="250px" height="125px"/>-->
-<img th:src="@{${'/images/' + Pet.name + '.jpg'}}" width="500px" height="250px" align="center"/>
+
+<img th:src="@{${'/images/' + Pet.name + '.jpg'}}" width="500px" height="350px"/>
+
+
+
 <!--<img th:src="@{~/images/Betley.jpg}" width="500px" height="250px"/>-->
 
 <!--<img th:src="@{~/images/{Pet.name} + '.jpg'}" width="250px" height="125px"/>-->
 
 <!--<th:block th:switch="${Pet.name}">-->
 <!--<div th:if="${Pet.name} == 'Bentley'">-->
-    <!--<img th:src="@{~/images/Bentley.jpg}" width="250px" height="125px"/>-->
+    <!--<img th:src="@{~/images/Bentley.jpg}" width="350px" height="200px"/>-->
 <!--</div>-->
 <!--<div th:if="${Pet.name} == 'Elvis'">-->
     <!--<img th:src="@{~/images/Elvis.jpg}" width="250px" height="125px"/>-->
@@ -112,7 +115,12 @@
 <!--<div th:if="${Pet.name} == 'Trooper'">-->
     <!--<img th:src="@{~/images/Trooper.jpg}" width="250px" height="125px"/>-->
 <!--</div>-->
+    <!--<div th:if="${Pet.name} == 'Barney'">-->
+        <!--<img th:src="@{~/images/Barney.jpg}" width="250px" height="125px"/>-->
+    <!--</div>-->
 <!--</th:block>-->
+
+
 
 
 </body>
