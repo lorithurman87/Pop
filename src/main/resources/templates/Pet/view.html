@@ -11,7 +11,6 @@
 
 <p th:unless="${pets} and ${pets.size()}">No pets currently available. Check back soon! </p>
 
-<!--<p><img th:src="@{~/static/images/Trooper.jpg}" width="420px" height="419px" alt="being cute"/> </p>-->
 
 <table class="table">
     <tr th:each="Pet : ${pets}">
@@ -19,8 +18,7 @@
     <!--<td th:text="${pet.pic}"></td>-->
     </tr>
 </table>
-<!--<a href="/cheese/add">Add</a> |-->
-<!--<a href="/cheese/remove">Remove</a>-->
+
 
 <br>
 <br>

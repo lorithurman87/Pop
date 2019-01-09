@@ -8,44 +8,8 @@
 <a href="/pop/pet/view">View all pets</a>
 <a href="/pop/user/logout">Logout</a>
 
-
 <nav th:replace="fragments :: navigation"></nav>
 
-
-<!--<div th:switch="${pet.name}"/>-->
-    <!--<div th:case='Bentley'/>-->
-        <!--<img th:src="@{~/images/Bentley.jpg}" width="250px" height="125px" align="right"/>-->
-
-<!--<p th:unless="${Pets} and ${Pet.size()}">No pets currently available. Check back soon! </p>-->
-
-<!--<p><img src="Pictures/pop_pictures/Trooper" width="420px" height="419px" alt="being cute"/> </p>-->
-
-<!--<div th:switch="${pet.name}">-->
-    <!--<div th:case="'Bentley'">-->
-        <!--<Img th:src="@{~/static/images/Bentley.jpg}">-->
-    <!--</div>-->
-    <!--<div th:case="'Elvis'">-->
-        <!--<Img th:src="@{~/static/images/Elvis.jpg}">-->
-    <!--</div>-->
-    <!--<div th:case="'Emma2'">-->
-        <!--<Img th:src="@{~/static/images/Emma2.jpg}">-->
-    <!--</div>-->
-    <!--<div th:case="'Josie'">-->
-        <!--<Img th:src="@{~/static/images/Josie.jpg}">-->
-    <!--</div>-->
-    <!--<div th:case="'Meatloaf'">-->
-        <!--<Img th:src="@{~/static/images/Meatloaf.jpg}">-->
-    <!--</div>-->
-    <!--<div th:case="'Smokey'">-->
-        <!--<Img th:src="@{~/static/images/Smokey.jpg}">-->
-    <!--</div>-->
-    <!--<div th:case="'Tara'">-->
-        <!--<Img th:src="@{~/static/images/Tara.jpg}">-->
-    <!--</div>-->
-    <!--<div th:case="'Trooper'">-->
-        <!--<Img th:src="@{~/static/images/Trooper.jpg}">-->
-    <!--</div>-->
-<!--</div>-->
 
 <table class="table">
 
@@ -72,10 +36,7 @@
     <tr><th>Interests</th><td th:text="${Pet.interests}"></td></tr>
     <tr><th>About</th><td th:text="${Pet.about}"></td</tr>
 
-
 <tr>
-
-
 
     </tr>
 
@@ -92,45 +53,6 @@
 <br>
 <br>
 <br>
-
-
-
-
-<!--<img th:src="@{~/images/Betley.jpg}" width="500px" height="250px"/>-->
-
-<!--<img th:src="@{~/images/{Pet.name} + '.jpg'}" width="250px" height="125px"/>-->
-
-<!--<th:block th:switch="${Pet.name}">-->
-<!--<div th:if="${Pet.name} == 'Bentley'">-->
-    <!--<img th:src="@{~/images/Bentley.jpg}" width="350px" height="200px"/>-->
-<!--</div>-->
-<!--<div th:if="${Pet.name} == 'Elvis'">-->
-    <!--<img th:src="@{~/images/Elvis.jpg}" width="250px" height="125px"/>-->
-<!--</div>-->
-<!--<div th:if="${Pet.name} == 'Emma2'">-->
-    <!--<img th:src="@{~/images/Emma2.jpg}" width="250px" height="125px"/>-->
-<!--</div>-->
-<!--<div th:if="${Pet.name} == 'Josie'">-->
-    <!--<img th:src="@{~/images/Josie.jpg}" width="250px" height="125px"/>-->
-<!--</div>-->
-<!--<div th:if="${Pet.name} == 'Meatloaf'">-->
-    <!--<img th:src="@{~/images/Meatloaf.jpg}" width="250px" height="125px"/>-->
-<!--</div>-->
-<!--<div th:if="${Pet.name} == 'Tara'">-->
-    <!--<img th:src="@{~/images/Tara.jpg}" width="250px" height="125px"/>-->
-<!--</div>-->
-<!--<div th:if="${Pet.name} == 'Smokey'">-->
-    <!--<img th:src="@{~/images/Smokey.jpg}" width="250px" height="125px"/>-->
-<!--</div>-->
-<!--<div th:if="${Pet.name} == 'Trooper'">-->
-    <!--<img th:src="@{~/images/Trooper.jpg}" width="250px" height="125px"/>-->
-<!--</div>-->
-    <!--<div th:if="${Pet.name} == 'Barney'">-->
-        <!--<img th:src="@{~/images/Barney.jpg}" width="250px" height="125px"/>-->
-    <!--</div>-->
-<!--</th:block>-->
-
-
 
 
 </body>
